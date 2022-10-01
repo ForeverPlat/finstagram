@@ -9,7 +9,7 @@ end
 get '/' do
 
 
-  finstagram_post_shark = {
+  @finstagram_post_shark = {
     username: "sharky_j",
     avatar_url: "https://live.staticflickr.com/65535/52358606250_01c667c5da_w.jpg",
     photo_url: "https://live.staticflickr.com/65535/52358421508_786aa10e2c_c.jpg",
@@ -22,6 +22,8 @@ get '/' do
     }]
   }
 
-  [finstagram_post_shark].to_s
+  [@finstagram_post_shark].to_s
+
+  erb(:index)
 
 end
