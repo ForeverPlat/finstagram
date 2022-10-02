@@ -22,7 +22,33 @@ get '/' do
     }]
   }
 
-  [@finstagram_post_shark].to_s
+  @finstagram_post_whale = {
+    username: "kirk_whalum",
+    avatar_url: "https://live.staticflickr.com/65535/52358421348_f34c7996b1.jpg",
+    photo_url: "https://live.staticflickr.com/65535/52357237337_1cc718f6a7_4k.jpg",
+    humanized_time_ago: humanized_time_ago(60),
+    like_count: 0,
+    comment_count: 1,
+    comments:[{
+      username:"kirk_whalum",
+      text: "#weekendvibes"
+    }]
+  }
+
+  @finstagram_post_marlin = {
+    username: "marlin_peppa",
+    avatar_url: "https://live.staticflickr.com/65535/52358415933_0a0e6bc35f_3k.jpg",
+    photo_url: "https://live.staticflickr.com/65535/52358494794_f88b160d15_4k.jpg",
+    humanized_time_ago: humanized_time_ago(190),
+    like_count: 0,
+    comment_count: 1,
+    comments:[{
+      username:"marlin_peppa",
+      text: "lunchtime! ;)"
+    }]
+  }
+
+  @finstagram_posts = [@finstagram_post_shark, @finstagram_post_whale, @finstagram_post_marlin]
 
   erb(:index)
 
